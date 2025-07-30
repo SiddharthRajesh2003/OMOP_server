@@ -102,9 +102,9 @@ omop_server/
    - Example (Python):
      ```python
      from omop_server.models.visit_occurrence import VisitOccurrence
-     visit = VisitOccurrence(schema='Reporting_Research')
+     visit = VisitOccurrence(schema='Target Schema')
      visit.set_config('config.json')
-     visit.set_source('Cerner_Encounter', 'EncounterBASE')
+     visit.set_source('Source Schema', 'Source Table')
      engine = visit.connect_db(os.getenv('DB_URL'), os.getenv('DB_NAME'))
      visit.create_table(engine)
      visit.insert_records(engine, batch_size=20000)
