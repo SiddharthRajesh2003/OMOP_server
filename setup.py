@@ -1,18 +1,18 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='omop_server',
+    name='OMOP_server',
     version='0.1.0',
     description='Your project description',
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     author='Siddharth Rajesh',
     author_email='siddharth.rajesh03@gmail.com',
     python_requires='>=3.8',
-    url='https://github.com/yourusername/your-project-name',
+    url='https://github.com/SiddharthRajesh2003/OMOP_server',
     project_urls={
-        'Repository': 'https://github.com/yourusername/your-project-name',
-        'Issues': 'https://github.com/yourusername/your-project-name/issues',
+        'Repository': 'https://github.com/SiddharthRajesh2003/OMOP_server',
+        'Issues': 'https://github.com/SiddharthRajesh2003/OMOP_server',
     },
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -25,7 +25,7 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
     ],
-    packages=find_packages(where='src', include=['your_package*']),
+    packages=find_packages(where='src', include=['OMOP_server*']),
     package_dir={'': 'src'},
     install_requires=[
         'absl-py==2.2.2',

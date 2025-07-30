@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "omop_server"
+name = "OMOP_server"
 version = "0.1.0"
 description = "This package initializes the tables in OMOP CDM as objects that can be called upon and used to perform the ETL process"
 readme = "README.md"
@@ -147,13 +147,13 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/your-project-name"
-Repository = "https://github.com/yourusername/your-project-name"
-Issues = "https://github.com/yourusername/your-project-name/issues"
+Homepage = "https://github.com/SiddharthRajesh2003/OMOP_server"
+Repository = "https://github.com/SiddharthRajesh2003/OMOP_server"
+Issues = "https://github.com/SiddharthRajesh2003/OMOP_server/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["your_package*"]
+include = ["OMOP_server*"]
 
 [tool.setuptools.package-dir]
 "" = "src"
