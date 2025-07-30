@@ -22,8 +22,8 @@ omop_server/
 │   ├── config.json
 │   └── README.md
 │
-├── sql/            # Raw SQL scripts for table creation, validation, and data quality checks
-│   ├── person.sql
+├── sql/            # Raw SQL scripts for table creation, validation, and data quality checks 
+│   ├── person.sql   # Not included in public repository for HIPAA purposes
 │   ├── visit_occurrence.sql
 │   ├── observation_period.sql
 │   ├── functions.sql
@@ -70,20 +70,26 @@ omop_server/
 
 ## 🚀 Quick Start
 
+1. **Clone the repository**
+```git
+   git clone https://github.com/SiddharthRajesh2003/OMOP_server.git
+```
+
 1. **Setup Virtual Environment**
    ```bash
    python -m venv venv
+   ./venv/Scripts/activate
    ```
 
 1. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   pip install .
    ```
 
 2. **Configure environment**
    - Create a `.env` file with your DB credentials:
      ```
-     USER=your_db_user
+     UID=your_db_user
      PWD=your_db_password
      DB_URL=your_db_url
      DB_NAME=your_db_name
