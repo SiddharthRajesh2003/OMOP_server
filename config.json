@@ -1,0 +1,57 @@
+{
+    "tables":{
+        "person":{
+            "source_columns":{
+                "person_id":"personid",
+                "gender":"gender_column_name",
+                "race":"race_column_name",
+                "ethnicity":"Ethnicgroup_column_name",
+                "birth_datetime":"BirthDatetime"
+            },
+            "required_columns":[
+                "personid",
+                "BirthDatetime"
+            ],
+            "optional_columns":[
+                "gender_column_name",
+                "race_column_name",
+                "Ethnicgroup_column_name"
+            ],
+            "column_mappings":{
+                "personid":{
+                    "omop field": "person_id",
+                    "data type": "int",
+                    "nullable": false,
+                    "description": "Unique Indentifier for person"
+                },
+                "gender_column_name":{
+                    "omop field":"gender_concept_id",
+                    "data type":"string",
+                    "nullable":true,
+                    "description:":"Gender/Sex description",
+                    "mapping_function": "map_gender"
+                },
+                "race_column_name":{
+                    "omop field": "race_concept_id",
+                    "data type":"string",
+                    "nullable": true,
+                    "description": "Race Description",
+                    "mapping_function": "map_race"
+                },
+                "Ethnicgroup_column_name":{
+                    "omop field": "ethnicity_concept_id",
+                    "data type":"string",
+                    "nullable": true,
+                    "description": "Ethnicity Description",
+                    "mapping_function": "map_ethnicity"
+                },
+                "BirthDatetime":{
+                    "omop field": "birth_datetime",
+                    "data type":"datetime",
+                    "nullable": false,
+                    "description": "Birth date and time"
+                }
+            }
+        }
+    }
+}
