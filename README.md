@@ -89,7 +89,7 @@ omop_server/
 2. **Configure environment**
    - Create a `.env` file with your DB credentials:
      ```
-     USER=your_db_user
+     UID=your_db_user
      PWD=your_db_password
      DB_URL=your_db_url
      DB_NAME=your_db_name
