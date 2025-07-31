@@ -1,6 +1,4 @@
 [build-system]
-
-[build-system]
 requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
@@ -85,8 +83,6 @@ Issues = "https://github.com/SiddharthRajesh2003/OMOP_server/issues"
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.setuptools.package-data]
-OMOP_server = ["config.json"]
 
 [tool.black]
 line-length = 88
