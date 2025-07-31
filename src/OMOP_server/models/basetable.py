@@ -8,9 +8,9 @@ from sqlalchemy import text
 from sqlalchemy.orm import declarative_base
 
 
-from ..utils.config_manager import ConfigManager
-from ..utils.connect import connect_db
-from ..utils.logging_manager import get_logger
+from OMOP_server.utils.config_manager import ConfigManager
+from OMOP_server.utils.connect import connect_db
+from OMOP_server.utils.logging_manager import get_logger
 
 Base = declarative_base()
 logger = get_logger(__name__)

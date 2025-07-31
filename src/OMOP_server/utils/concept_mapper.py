@@ -2,9 +2,9 @@ import pandas as pd
 import logging
 from sqlalchemy import text
 from fuzzywuzzy import fuzz, process
-from .transformerconceptmapper import TransformerConceptMapper
+from OMOP_server.utils.transformerconceptmapper import TransformerConceptMapper
 import torch
-from .logging_manager import get_logger
+from OMOP_server.utils.logging_manager import get_logger
 
 logger=get_logger(__name__)
 

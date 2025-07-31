@@ -10,11 +10,11 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import ProgrammingError
 
 
-from ..utils.concept_mapper import ConceptMapper
-from ..utils.utility import sql_val
-from ..models.basetable import ParentBase
-from ..models.visit_occurrence import VisitOccurrence
-from ..utils.logging_manager import get_logger
+from OMOP_server.utils.concept_mapper import ConceptMapper
+from OMOP_server.utils.utility import sql_val
+from OMOP_server.models.basetable import ParentBase
+from OMOP_server.models.visit_occurrence import VisitOccurrence
+from OMOP_server.utils.logging_manager import get_logger
 
 logger=get_logger(__name__)
 
