@@ -8,41 +8,40 @@ This directory contains a modular, extensible ETL framework for transforming hea
 
 ```
 OMOP_server/
-│
-├── models/         # SQLAlchemy ORM models and ETL logic for OMOP tables
-│   ├── basetable.py
-│   ├── person_id.py
-│   ├── person.py
-│   ├── visit_occurrence.py
-│   ├── condition_occurrence.py
-│   ├── procedure_occurrence.py
-│   ├── observation_period.py
-│   ├── concept_builder.py
-│   ├── concept_relationship.py
-│   ├── config.json
-│   └── README.md
-│
-├── sql/            # Raw SQL scripts for table creation, validation, and data quality checks 
-│   ├── person.sql   # Not included in public repository for HIPAA purposes
-│   ├── visit_occurrence.sql
-│   ├── observation_period.sql
-│   ├── functions.sql
-│   └── README.md
-│
-├── utils/          # Utility modules for DB connections, concept mapping, config management, etc.
-│   ├── utility.py
-│   ├── connect.py
-│   ├── transformerconceptmapper.py
-│   ├── concept_mapper.py
-│   ├── config_manager.py
-│   ├── utility.py
-│   └── README.md
-│
+├── src/
+│   └── OMOP_server/                # Main package directory
+│       ├── __init__.py
+│       ├── config.json
+│       ├── models/
+│       │   ├── __init__.py
+│       │   ├── basetable.py
+│       │   ├── person_id.py
+│       │   ├── person.py
+│       │   ├── visit_occurrence.py
+│       │   ├── condition_occurrence.py
+│       │   ├── procedure_occurrence.py
+│       │   ├── observation_period.py
+│       │   ├── concept_builder.py
+│       │   └──concept_relationship.py
+│       │   
+│       ├── utils/
+│       │   ├── __init__.py
+│       │   ├── utility.py
+│       │   ├── connect.py
+│       │   ├── transformerconceptmapper.py
+│       │   ├── concept_mapper.py
+│       │   ├── config_manager.py
+│       │   └── logging_manager.py
+│       └── sql/
+│           ├── __init__.py
+│           └── *.sql files   # ignored for HIPAA purposes
 ├── requirements.txt
 ├── pyproject.toml
 ├── setup.py
+├── README.md
 ├── .env
-└── __init__.py
+├── .gitignore
+└── LICENSE
 ```
 
 ---
