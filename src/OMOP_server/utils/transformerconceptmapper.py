@@ -8,7 +8,7 @@ from typing import List, Dict
 import re
 from tqdm import tqdm
 import warnings
-from .logging_manager import get_logger
+from utils.logging_manager import get_logger
 
 logger=get_logger(__name__)
 warnings.filterwarnings('ignore')
@@ -498,3 +498,5 @@ def demonstrate_semantic_matching():
     
     concept_name = df['concept_name'].to_list()
     embeddings = concept_mapper.get_embeddings(concept_name)'''
+
+demonstrate_semantic_matching()
