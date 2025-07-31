@@ -38,9 +38,8 @@ __all__ = [
     "ConceptRelationship",
     
     # Utils
-    "create_engine_connection",
+    "connect",
     "ConceptMapper",
     "TransformerConceptMapper", 
-    "ConfigManager",
-    "load_config",
+    "ConfigManager"
 ]
