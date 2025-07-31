@@ -105,7 +105,7 @@ Create `config.json` with your source-to-OMOP mappings:
 ```python
 import os
 from dotenv import load_dotenv
-from omop_server.models.visit_occurrence import VisitOccurrence
+from OMOP_server.models.visit_occurrence import VisitOccurrence
 
 # Load environment variables
 load_dotenv()
@@ -152,8 +152,8 @@ except Exception as e:
 
 ```python
 # Advanced ETL with concept mapping and monitoring
-from omop_server.models.visit_occurrence import VisitOccurrence
-from omop_server.utils.concept_mapper import ConceptMapper
+from OMOP_server.models.visit_occurrence import VisitOccurrence
+from OMOP_server.utils.concept_mapper import ConceptMapper
 
 # Initialize with enhanced configuration
 visit_model = VisitOccurrence(schema='your target schema')
@@ -444,7 +444,7 @@ visit_model.insert_records(
    ```python
    # Check if ConceptMapper is working
    try:
-       from omop_server.utils.concept_mapper import ConceptMapper
+       from OMOP_server.utils.concept_mapper import ConceptMapper
        mapper = ConceptMapper(engine=engine, schema=schema, domain='Visit')
        concepts = mapper.get_concept_lookups()
        print(f"Loaded {len(concepts)} concepts")

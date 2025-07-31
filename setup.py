@@ -1,31 +1,34 @@
 from setuptools import setup, find_packages
+import os
+
+# Read README
+def read_readme():
+    if os.path.exists('README.md'):
+        with open('README.md', 'r', encoding='utf-8') as f:
+            return f.read()
+    return ""
 
 setup(
-    name='OMOP_server',
-    version='0.1.0',
-    description='This package initializes the tables in OMOP CDM as objects that can be called upon and used to perform the ETL process',
-    long_description=open('README.md', encoding='utf-8').read(),
-    long_description_content_type='text/markdown',
-    author='Siddharth Rajesh',
-    author_email='siddharth.rajesh03@gmail.com',
-    python_requires='>=3.8',
-    url='https://github.com/SiddharthRajesh2003/OMOP_server',
-    project_urls={
-        'Repository': 'https://github.com/SiddharthRajesh2003/OMOP_server',
-        'Issues': 'https://github.com/SiddharthRajesh2003/OMOP_server/issues',
-    },
+    name="OMOP-server",  # Note: using uppercase here too
+    version="1.0.0",
+    author="Siddharth Rajesh",
+    author_email="your.email@example.com",
+    description="ETL framework for transforming healthcare data into OMOP Common Data Model",
+    long_description=read_readme(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/SiddharthRajesh2003/OMOP_server",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
-        'Programming Language :: Python :: 3.12',
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Healthcare Industry",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
-    packages=find_packages(include=['OMOP_server*']),
+    python_requires=">=3.8",
     install_requires=[
         'certifi==2025.7.14',
         'charset-normalizer==3.4.2',
@@ -80,5 +83,8 @@ setup(
         ]
     },
     include_package_data=True,
+    package_data={
+        'OMOP_server': ['config.json'],
+    },
     zip_safe=False,
 )

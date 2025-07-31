@@ -1,27 +1,26 @@
 [build-system]
+
+[build-system]
 requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "OMOP_server"
-version = "0.1.0"
-description = "This package initializes the tables in OMOP CDM as objects that can be called upon and used to perform the ETL process"
+name = "OMOP-server"
+version = "1.0.0"
+description = "ETL framework for transforming healthcare data into OMOP Common Data Model"
+authors = [{name = "Siddharth Rajesh", email = "your.email@example.com"}]
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
-authors = [
-    {name = "Siddharth Rajesh", email = "siddharth.rajesh03@gmail.com"}
-]
 classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Healthcare Industry",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
 ]
 
 dependencies = [
@@ -86,8 +85,8 @@ Issues = "https://github.com/SiddharthRajesh2003/OMOP_server/issues"
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.setuptools.package-dir]
-"" = "src"
+[tool.setuptools.package-data]
+OMOP_server = ["config.json"]
 
 [tool.black]
 line-length = 88
