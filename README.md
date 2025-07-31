@@ -102,7 +102,7 @@ OMOP_server/
 4. **Run ETL**
    - Example (Python):
      ```python
-     from omop_server.models.visit_occurrence import VisitOccurrence
+     from OMOP_server.models.visit_occurrence import VisitOccurrence
      visit = VisitOccurrence(schema='Target Schema')
      visit.set_config('config.json')
      visit.set_source('Source Schema', 'Source Table')
