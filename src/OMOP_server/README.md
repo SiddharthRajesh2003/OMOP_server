@@ -152,4 +152,18 @@ omop_server/
 - Add tests for new features.
 
 
-* This ETL framework is designed to streamline OMOP CDM implementation and ensure data quality in
+* This ETL framework is designed to streamline OMOP CDM implementation and ensure data quality in the database
+
+## Acknowledgement
+
+I would like to express my sincere gratitude to Indiana University Health for their invaluable contribution in shaping and advancing this project. Their multifaceted support has been instrumental to the successful completion of this work.
+
+First and foremost, I am deeply appreciative of Indiana University Health's generous provision of data access, which formed the foundation of this research. The comprehensive datasets made available through their system enabled robust analysis and provided the empirical basis necessary for drawing meaningful conclusions. Without this critical resource, the scope and depth of this project would not have been possible.
+
+The clinical expertise provided by Indiana University Health's medical professionals proved invaluable throughout the project's development. Their deep understanding of healthcare practices, patient care protocols, and clinical workflows offered essential insights that guided the research methodology and ensured the practical relevance of the findings. The clinicians' willingness to share their knowledge and provide guidance on complex medical concepts significantly enhanced the quality and accuracy of this work.
+
+Furthermore, the collaborative partnership with Indiana University Health created an environment of shared learning and innovation. Their team's commitment to advancing healthcare through research, combined with their openness to interdisciplinary collaboration, fostered an atmosphere that encouraged rigorous inquiry and creative problem-solving. This partnership exemplifies the powerful synergy that can emerge when academic research meets real-world healthcare expertise.
+
+The support from Indiana University Health extends beyond the technical and clinical aspects of this project. Their dedication to improving patient outcomes and advancing healthcare delivery aligned perfectly with the goals of this research, creating a shared vision that motivated excellence throughout the process.
+
+I am honored to have had the opportunity to work alongside such dedicated healthcare professionals and am grateful for their trust in supporting this research endeavor. The insights gained through this collaboration will undoubtedly contribute to the broader healthcare community's understanding and practice.
