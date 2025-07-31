@@ -10,10 +10,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, Integer, DateTime, VARCHAR
 
 
-from OMOP_server.utils.utility import map_ethnicity, map_race, map_gender, sql_val
-from OMOP_server.models.person_id import Person_ID  # Import Person_ID for reference
-from OMOP_server.models.basetable import ParentBase
-from OMOP_server.utils.logging_manager import get_logger
+from ..utils.utility import map_ethnicity, map_race, map_gender, sql_val
+from ..models.person_id import Person_ID  # Import Person_ID for reference
+from ..models.basetable import ParentBase
+from ..utils.logging_manager import get_logger
 
 logger=get_logger(__name__)
 

@@ -8,7 +8,7 @@ from typing import List, Dict
 import re
 from tqdm import tqdm
 import warnings
-from omop_server.utils.logging_manager import get_logger
+from .logging_manager import get_logger
 
 logger=get_logger(__name__)
 warnings.filterwarnings('ignore')

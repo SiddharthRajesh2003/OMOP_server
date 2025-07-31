@@ -10,9 +10,9 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import ProgrammingError
 
 
-from OMOP_server.utils.utility import sql_val
-from OMOP_server.models.basetable import ParentBase
-from OMOP_server.utils.logging_manager import get_logger
+from ..utils.utility import sql_val
+from ..models.basetable import ParentBase
+from ..utils.logging_manager import get_logger
 
 logger=get_logger(__name__)
 
