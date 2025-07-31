@@ -25,8 +25,7 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
     ],
-    packages=find_packages(where='src', include=['OMOP_server*']),
-    package_dir={'': 'src'},
+    packages=find_packages(include=['OMOP_server*']),
     install_requires=[
         'certifi==2025.7.14',
         'charset-normalizer==3.4.2',

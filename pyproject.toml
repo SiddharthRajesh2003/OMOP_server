@@ -84,7 +84,6 @@ Repository = "https://github.com/SiddharthRajesh2003/OMOP_server"
 Issues = "https://github.com/SiddharthRajesh2003/OMOP_server/issues"
 
 [tool.setuptools.packages.find]
-where = ["src"]
 include = ["OMOP_server*"]
 
 [tool.setuptools.package-dir]
