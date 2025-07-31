@@ -1,9 +1,0 @@
-models/__pycache__
-utils/__pycache__
-.env
-__pycache__
-tables.md
-logs/
-venv/
-explore.ipynb
-sql/
