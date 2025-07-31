@@ -4,7 +4,7 @@ Utility Functions and Classes
 
 try:
     from .utility import map_ethnicity, map_race, map_gender, sql_val
-    from .connect import create_engine, get_connection
+    from .connect import connect_db
     from .concept_mapper import ConceptMapper
     from .transformerconceptmapper import TransformerConceptMapper
     from .config_manager import ConfigManager
@@ -16,7 +16,7 @@ try:
         "map_gender",
         "sql_val",
         "create_engine",
-        "get_connection",
+        "connect_db",
         "ConceptMapper",
         "TransformerConceptMapper",
         "ConfigManager",

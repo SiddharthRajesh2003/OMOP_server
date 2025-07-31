@@ -7,3 +7,4 @@ logs/
 venv/
 explore.ipynb
 sql/
+src/__pycache__

@@ -20,7 +20,7 @@ from .models import (
 )
 
 from .utils import (
-    connect,
+    connect_db,
     ConceptMapper,
     TransformerConceptMapper,
     ConfigManager
@@ -38,7 +38,7 @@ __all__ = [
     "ConceptRelationship",
     
     # Utils
-    "connect",
+    "connect_db",
     "ConceptMapper",
     "TransformerConceptMapper", 
     "ConfigManager"
