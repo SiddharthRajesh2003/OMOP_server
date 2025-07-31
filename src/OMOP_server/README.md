@@ -7,7 +7,7 @@ This directory contains a modular, extensible ETL framework for transforming hea
 ## 📁 Directory Structure
 
 ```
-omop_server/
+OMOP_server/
 │
 ├── models/         # SQLAlchemy ORM models and ETL logic for OMOP tables
 │   ├── basetable.py
