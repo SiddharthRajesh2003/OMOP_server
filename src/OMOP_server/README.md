@@ -83,6 +83,7 @@ OMOP_server/
 
 1. **Install dependencies**
    ```bash
+   cd OMOP_server
    pip install .
    ```
 
