@@ -8,3 +8,4 @@ venv/
 explore.ipynb
 sql/
 src/__pycache__
+__pycache__
