@@ -1,21 +1,46 @@
 """
-OMOP Server: ETL Framework for OMOP Common Data Model
+OMOP_server: A modular, extensible ETL framework for transforming healthcare data 
+into the OMOP Common Data Model (CDM) using Python, SQLAlchemy, and advanced concept mapping.
 """
 
-__version__ = "1.0.0"
+__version__ = "0.1.0"
 __author__ = "Siddharth Rajesh"
+__email__ = "siddharth.rajesh03@gmail.com"
 
-# Import main classes for easy access
-from .models.person import Person
-from .models.visit_occurrence import VisitOccurrence
-from .models.condition_occurrence import ConditionOccurrence
-from .models.procedure_occurrence import ProcedureOccurrence
-from .models.observation_period import ObservationPeriod
+# Import main classes and functions for easy access
+from .models import (
+    ParentBase,
+    Person,
+    VisitOccurrence,
+    ConditionOccurrence,
+    ProcedureOccurrence,
+    ObservationPeriod,
+    ConceptBuilder,
+    ConceptRelationship
+)
+
+from .utils import (
+    connect,
+    ConceptMapper,
+    TransformerConceptMapper,
+    ConfigManager
+)
 
 __all__ = [
-    "Person",
-    "VisitOccurrence", 
+    # Models
+    "ParentBase",
+    "Person", 
+    "VisitOccurrence",
     "ConditionOccurrence",
-    "ProcedureOccurrence",
-    "ObservationPeriod"
+    "ProcedureOccurrence", 
+    "ObservationPeriod",
+    "ConceptBuilder",
+    "ConceptRelationship",
+    
+    # Utils
+    "create_engine_connection",
+    "ConceptMapper",
+    "TransformerConceptMapper", 
+    "ConfigManager",
+    "load_config",
 ]
