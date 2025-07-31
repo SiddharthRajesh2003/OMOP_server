@@ -1,294 +1,55 @@
 {
     "tables":{
-        "person_id":{
-            "source_columns":{
-                "person_id":"PersonID"
-            },
-            "required_columns":[
-                    "PersonID"
-            ],
-            "optional_columns":[],
-            "column_mappings":{
-                "PersonID":{
-                    "omop field": "person_id",
-                    "data type": "int",
-                    "nullable": false,
-                    "description": "Unique Indentifier for person"
-                }
-            }
-        },
         "person":{
             "source_columns":{
-                "person_id":"PersonID",
-                "gender":"SexCVDisplayDSC",
-                "race":"RaceCVDSC",
-                "ethnicity":"EthnicGroupCVDisplayDSC",
-                "birth_datetime":"BirthDTS"
+                "person_id":"personid",
+                "gender":"gender_column_name",
+                "race":"race_column_name",
+                "ethnicity":"Ethnicgroup_column_name",
+                "birth_datetime":"BirthDatetime"
             },
             "required_columns":[
-                "PersonID",
-                "BirthDTS"
+                "personid",
+                "BirthDatetime"
             ],
             "optional_columns":[
-                "SexCVDisplayDSC",
-                "RaceCVDSC",
-                "EthnicGroupCVDisplayDSC"
+                "gender_column_name",
+                "race_column_name",
+                "Ethnicgroup_column_name"
             ],
             "column_mappings":{
-                "PersonID":{
+                "personid":{
                     "omop field": "person_id",
                     "data type": "int",
                     "nullable": false,
                     "description": "Unique Indentifier for person"
                 },
-                "SexCVDisplayDSC":{
+                "gender_column_name":{
                     "omop field":"gender_concept_id",
                     "data type":"string",
                     "nullable":true,
                     "description:":"Gender/Sex description",
                     "mapping_function": "map_gender"
                 },
-                "RaceCVDSC":{
+                "race_column_name":{
                     "omop field": "race_concept_id",
                     "data type":"string",
                     "nullable": true,
                     "description": "Race Description",
                     "mapping_function": "map_race"
                 },
-                "EthnicGroupCVDisplayDSC":{
+                "Ethnicgroup_column_name":{
                     "omop field": "ethnicity_concept_id",
                     "data type":"string",
                     "nullable": true,
                     "description": "Ethnicity Description",
                     "mapping_function": "map_ethnicity"
                 },
-                "BirthDTS":{
+                "BirthDatetime":{
                     "omop field": "birth_datetime",
                     "data type":"datetime",
                     "nullable": false,
                     "description": "Birth date and time"
-                }
-            }
-        },
-        "observation_period":{
-            "source_columns":{
-                "person_id": "PersonID",
-                "observation_period_start_date": "BeginEffectiveDTS",
-                "observation_period_end_date":"TransactionDTS"
-            },
-            "required_columns":[
-                "PersonID",
-                "BeginEffectiveDTS",
-                "TransactionDTS"
-            ],
-            "optional_columns":[],
-            "column_mappings": {
-                "PersonID":{
-                   "omop field": "person_id",
-                   "data type": "int",
-                   "nullable":false,
-                   "description":"Foreign key to person table",
-                   "foreign key":{
-                    "reference table":"person",
-                    "reference column":"person_id"
-                   }
-                },
-                "BeginEffectiveDTS":{
-                    "omop field":"observation_period_start_date",
-                    "data type":"date",
-                    "nullable":false,
-                    "description":"Start date of the Observation period"
-                },
-                "TransactionDTS":{
-                    "omop field":"observation_period_end_date",
-                    "data type":"date",
-                    "nullable":false,
-                    "description":"End date of the observation period"
-                }
-            }
-        },
-        "visit_occurrence":{
-            "source_columns":{
-                "visit_occurrence_id":"EncounterID",
-                "person_id":"PersonID",
-                "visit_source_value":"EncounterTypeCVDisplayDSC",
-                "visit_start_datetime":"RegistrationDTS",
-                "visit_end_datetime":"EncounterCompleteDTS",
-                "care_site_id":"LocationCVCD",
-                "admitted_from":"AdmitSourceCVDisplayDSC",
-                "discharged_to":"DischargeToLocationCVDisplayDSC"
-            },
-            "required_columns":[
-                "PersonID",
-                "EncounterID",
-                "RegistrationDTS",
-                "EncounterCompleteDTS"
-            ],
-            "column_mappings":{
-                "EncounterID":{
-                    "omop field": "visit_occurrence_id",
-                    "data type": "int",
-                    "nullable":false,
-                    "description":"Primary key of visit_occurrence table"
-                },
-                "PersonID":{
-                    "omop field": "person_id",
-                    "data type": "int",
-                    "nullable":false,
-                    "description":"Foreign key to person table",
-                    "foreign key":{
-                        "reference table":"person",
-                        "reference column":"person_id"
-                    }
-                },
-                "EncounterTypeCVDisplayDSC":{
-                    "omop field":"visit_concept_id and visit_source_value",
-                    "data type": "varchar",
-                    "nullable":false,
-                    "description": "This field houses the verbatim value from the source data representing the kind of visit that took place (inpatient, outpatient, emergency, etc.)"
-                },
-                "RegistrationDTS":{
-                        "omop field":"visit_start_datetime",
-                        "data type":"date",
-                        "nullable":false,
-                        "description":"Start date of the visit occurrence/encounter"
-                },
-                "EncounterCompleteDTS":{
-                        "omop field":"observation_period_end_date",
-                        "data type":"date",
-                        "nullable":false,
-                        "description":"End date of the visit occurrence/encounter"
-                },
-                "LocationCVCD":{
-                    "omop field":"care_site_id",
-                    "data type":"int",
-                    "nullable":true,
-                    "description":"Location ID of where care was provided"
-                },
-                "AdmitSourceCVDisplayDSC":{
-                    "omop field":"admitted_from_concept_id and admitted_from_source_value",
-                    "data type":"int",
-                    "nullable":true,
-                    "description":"Place from which the person was admitted from"
-                },
-                "DischargeToLocationCVDisplayDSC":{
-                    "omop field":"discharge_to_concept_id and discharge_to_source_value",
-                    "data type":"int",
-                    "nullable":true,
-                    "description":"Place to which the person was discharged to mostly back to their homes."
-                }
-            }
-        },
-        "condition_occurrence":{
-            "source_columns":{
-                "condition_occurrence_id":"DiagnosisID",
-                "person_id":"PersonID",
-                "condition_start_date":"DiagnosisDTS",
-                "condition_end_date":"DiagnosisDTS",
-                "provider_id":"DiagnosisPersonnelID",
-                "visit_occurrence_id":"EncounterID",
-                "condition_source_value":"DiagnosisDisplayDSC",
-                "condition_status_source_value":"ConfirmationStatusCVDisplayDSC"
-            },
-            "required_columns":[
-                "DiagnosisID",
-                "PersonID",
-                "DiagnosisDTS"
-            ],
-            "column_mappings":{
-                "DiagnosisID":{
-                    "omop field":"condition_occurrence_id",
-                    "data type":"int",
-                    "nullable":false,
-                    "description":"Primary key of condition_occurrence table"
-                },
-                "EncounterID":{
-                    "omop field": "visit_occurrence_id",
-                    "data type": "int",
-                    "nullable":false,
-                    "description":"Foreign key of visit_occurrence table"
-                },
-                "PersonID":{
-                    "omop field": "person_id",
-                    "data type": "int",
-                    "nullable":false,
-                    "description":"Foreign key to person table",
-                    "foreign key":{
-                        "reference table":"person",
-                        "reference column":"person_id"
-                    }
-                },
-                "DiagnosisDTS":{
-                        "omop field":"condition_start_datetime",
-                        "data type":"date",
-                        "nullable":false,
-                        "description":"Start and end date of the condition occurrence/diagnosis"
-                },
-                "DiagnosisPersonnelID":{
-                    "omop field":"provider_id",
-                    "data type":"int",
-                    "nullable":false,
-                    "description":"Provider who diagnosed the patient"
-                },
-                "DiagnosisDisplayDSC":{
-                    "omop field":"condition_source_value",
-                    "data type": "varchar",
-                    "nullable":true,
-                    "description":"official diagnosis of the patient by the provider"
-                },
-                "ConfirmationStatusCVDisplayDSC":{
-                    "omop field":"condition_status_source_value",
-                    "data type":"varchar",
-                    "nullable":true,
-                    "description":"Status of the patient during diagnosis"
-                }
-            }
-        },
-        "procedure_occurrence":{
-            "source_columns":{
-                "procedure_occurrence_id":"ProcedureID",
-                "person_id":"PersonID",
-                "visit_occurrence_id":"EncounterID",
-                "procedure_date":"ProcedureDTS",
-                "procedure_source_value":"ProcedureNoteTXT"
-            },
-            "required_columns":[
-                "ProcedureID", "PersonID", "ProcedureDTS"
-            ],
-            "column_mappings":{
-                "ProcedureID":{
-                    "omop field":"procedure_occurrence_id",
-                    "data type":"int",
-                    "nullable":false,
-                    "description":"Primary key of procedure_occurrence table"
-                },
-                "PersonID":{
-                    "omop field": "person_id",
-                    "data type": "int",
-                    "nullable":false,
-                    "description":"Foreign key to person table",
-                    "foreign key":{
-                        "reference table":"person",
-                        "reference column":"person_id"
-                    }
-                },
-                "EncounterID":{
-                    "omop field": "visit_occurrence_id",
-                    "data type": "int",
-                    "nullable":true,
-                    "description":"Foreign key to visit_occurrence table"
-                },
-                "ProcedureDTS":{
-                        "omop field":"procedure_datetime",
-                        "data type":"date",
-                        "nullable":false,
-                        "description":"Date and time of the procedure occurrence"
-                },
-                "ProcedureNoteTXT":{
-                    "omop field":"procedure_source_value",
-                    "data type": "varchar",
-                    "nullable":true,
-                    "description":"Official note of the procedure performed on the patient"
                 }
             }
         }
