@@ -5,4 +5,5 @@ __version__ = "1.0.0"
 __author__ = "Siddharth Rajesh"
 
 # Import main classes for easy access
-import OMOP_server
+from . import models
+from . import utils
