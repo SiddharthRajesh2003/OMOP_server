@@ -8,33 +8,32 @@ This directory contains a modular, extensible ETL framework for transforming hea
 
 ```
 OMOP_server/
-├── src/
-│   └── OMOP_server/                # Main package directory
-│       ├── __init__.py
-│       ├── config.json
-│       ├── models/
-│       │   ├── __init__.py
-│       │   ├── basetable.py
-│       │   ├── person_id.py
-│       │   ├── person.py
-│       │   ├── visit_occurrence.py
-│       │   ├── condition_occurrence.py
-│       │   ├── procedure_occurrence.py
-│       │   ├── observation_period.py
-│       │   ├── concept_builder.py
-│       │   └──concept_relationship.py
-│       │   
-│       ├── utils/
-│       │   ├── __init__.py
-│       │   ├── utility.py
-│       │   ├── connect.py
-│       │   ├── transformerconceptmapper.py
-│       │   ├── concept_mapper.py
-│       │   ├── config_manager.py
-│       │   └── logging_manager.py
-│       └── sql/
-│           ├── __init__.py
-│           └── *.sql files   # ignored for HIPAA purposes
+├── OMOP_server/                # Main package directory
+│     ├── __init__.py
+│     ├── config.json
+│     ├── models/
+│     │   ├── __init__.py
+│     │   ├── basetable.py
+│     │   ├── person_id.py
+│     │   ├── person.py
+│     │   ├── visit_occurrence.py
+│     │   ├── condition_occurrence.py
+│     │   ├── procedure_occurrence.py
+│     │   ├── observation_period.py
+│     │   ├── concept_builder.py
+│     │   └──concept_relationship.py
+│     │   
+│     ├── utils/
+│     │   ├── __init__.py
+│     │   ├── utility.py
+│     │   ├── connect.py
+│     │   ├── transformerconceptmapper.py
+│     │   ├── concept_mapper.py
+│     │   ├── config_manager.py
+│     │   └── logging_manager.py
+│     └── sql/ # ignored for HIPAA purposes
+│         ├── __init__.py
+│         └── *.sql files   
 ├── requirements.txt
 ├── pyproject.toml
 ├── setup.py
