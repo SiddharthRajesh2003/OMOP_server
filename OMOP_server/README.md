@@ -82,7 +82,7 @@ OMOP_server/
 1. **Install dependencies**
    ```bash
    cd OMOP_server
-   pip install .
+   pip install -e .
    ```
 
 2. **Configure environment**
