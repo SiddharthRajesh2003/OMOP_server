@@ -12,7 +12,7 @@ setup(
     name="OMOP-server",  # Note: using uppercase here too
     version="1.0.0",
     author="Siddharth Rajesh",
-    author_email="your.email@example.com",
+    author_email="siddharth.rajesh03@gmail.com",
     description="ETL framework for transforming healthcare data into OMOP Common Data Model",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
