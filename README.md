@@ -85,7 +85,7 @@ OMOP_server/
    pip install -e .
    ```
 
-2. **Configure environment**
+1. **Configure environment**
    - Create a `.env` file with your DB credentials:
      ```
      UID=your_db_user
@@ -94,10 +94,10 @@ OMOP_server/
      DB_NAME=your_db_name
      ```
 
-3. **Set up config**
+1. **Set up config**
    - Edit `models/config.json` to map your source columns to OMOP fields.
 
-4. **Run ETL**
+1. **Run ETL**
    - Example (Python):
      ```python
      from OMOP_server.models.visit_occurrence import VisitOccurrence
@@ -109,7 +109,7 @@ OMOP_server/
      visit.insert_records(engine, batch_size=20000)
      ```
 
-5. **Use SQL scripts**
+1. **Use SQL scripts**
    - Run scripts in `sql/` for manual table creation or validation as needed.
 
 ---
